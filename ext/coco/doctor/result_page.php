@@ -12,7 +12,6 @@ include_once 'conaction.php';
 <body>
     <h1>Result Page</h1>
 
-    <!-- Fetch and display appointment results in a table -->
     <table border="1">
         <tr>
             <th>User Name</th>
@@ -21,7 +20,6 @@ include_once 'conaction.php';
         </tr>
 
         <?php
-        // Assuming $con is your database connection
         $result = $con->query("SELECT * FROM appointments JOIN doctors ON appointments.doctor_id = doctors.doctor_id");
         
         while ($row = $result->fetch_assoc()) {

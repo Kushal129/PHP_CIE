@@ -13,7 +13,7 @@ include_once 'conaction.php';
 <body>
     <h1>User Page</h1>
 
-    <form action="user_action.php" method="post">
+    <form action="user_action.php" method="post" enctype="multipart/form-data">
         <label for="name">Name : </label>
         <input type="text" name="name" id="name" required>
         <br><br>
@@ -27,7 +27,9 @@ include_once 'conaction.php';
             ?>
         </select>
         <br><br>
-
+        <label for="file">Upload File:</label>
+        <input type="file" name="file" id="file">
+        <br><br>
         <button type="submit">Book Appointment</button>
 
         <a href="result_page.php">View Results</a>
